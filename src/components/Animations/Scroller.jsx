@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Scroller = () => {
-    return (
-        <div>   Scroller</div>
-    )
-}
+  return <div> Scroller</div>;
+};
 
-export default Scroller
+export default Scroller;
