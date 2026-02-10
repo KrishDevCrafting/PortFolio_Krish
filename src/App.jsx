@@ -1,7 +1,15 @@
-import React from 'react'
-
+import React from "react";
+import Navbar from "./components/Layout/Navbar";
+import Hero from "./components/Layout/Hero";
 const App = () => {
-  return <div className="h-[1400px] text-7xl">App</div>
-}
+  return (
+    <div className="min-h-screen bg-black ">
+      <Navbar />
+      <main>
+        <Hero />
+      </main>
+    </div>
+  );
+};
 
-export default App
+export default App;
