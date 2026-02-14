@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Code, Menu, X } from "lucide-react";
 
-import { NAV_LINKS, PERSONAL_INFO } from "../utils/contants";
+import { NAV_LINKS, PERSONAL_INFO } from "../../utils/Constants";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const activaSection = useScrollSpy(NAV_LINKS.map((link) => link.id));
+  const activeSection = useScrollSpy(NAV_LINKS.map((link) => link.id));
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -15,8 +16,8 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []); 
+    return () => window.removeEventListener("scroll", handleScroll);  
+  }, []);
 
   const handleNavClick = (sectionId) => {
     scrollToSection(sectionId);

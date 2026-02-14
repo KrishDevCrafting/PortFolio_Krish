@@ -1,42 +1,37 @@
-import { useEffect, useState } from "react";
+import { options } from "prettier-plugin-tailwindcss";
+import React, { useState } from "react";
 
-export const useScrollReveal = (sectionIds, offset = 100) => {
-  const [activSection, setActivaSection] = useState(null);
+const useScrollrevel = () => {
+  const { threshold = 0.1, rootMargin = "0px" } = options;
+
+  const [isVisible, setVisible] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + offset;
-
-      // find the current section
-
-      for (let i = section.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sectionId[i]);
-        if (section) {
-          const sectionTop = section.offerTop;
-          const sectionHeight = section.offsetHeight;
-          if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            setActivaSection(sectionId[i]);
-            break;
-          }
+    const element = ref.current;
+    if (!element) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(element);
         }
-      }
-    };
-
-    handleScroll();
+      },
+      { threshold, rootMargin },
+    );
+    observer.observe(element);
   });
-  window.addEventListener("scroll", handleScroll, { passive: true });
+
   return (
     () => {
-      window.removeEventListener("scroll", handleScroll, { passive: true });
+      if (element) {
+        observer.unobserve(element);
+      }
     },
-    [sectionIds, offset]
+    [threshold, rootMargin]
   );
 
-  return activSection;
+  return { ref, isVisible };
 };
 
-
-// Smooth Scroll to a function
+export default useScrollrevel;
