@@ -31,3 +31,11 @@ export const ABOUT_STATS = [
   { label: "Code Commits", value: "2.5k" },
   { label: "GitHub Stars", value: "500" },
 ];
+
+export const NAV_LINKS = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+  { id: "services", label: "Services" },
+];
