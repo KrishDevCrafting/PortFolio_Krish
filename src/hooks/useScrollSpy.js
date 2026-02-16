@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const useScrollReveal = (sectionIds, offset = 100) => {
-  const [activSection, setActivaSection] = useState("");
+export const useScrollSpy = (sectionIds, offset = 100) => {
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -9,16 +9,16 @@ export const useScrollReveal = (sectionIds, offset = 100) => {
 
       // find the current section
 
-      for (let i = section.length - 1; i >= 0; i--) {
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
         const section = document.getElementById(sectionIds[i]);
         if (section) {
-          const sectionTop = section.offerTop;
+          const sectionTop = section.offsetTop;
           const sectionHeight = section.offsetHeight;
           if (
             scrollPosition >= sectionTop &&
             scrollPosition < sectionTop + sectionHeight
           ) {
-            setActivaSection(sectionId[i]);
+            setActiveSection(sectionIds[i]);
             break;
           }
         }
@@ -26,16 +26,14 @@ export const useScrollReveal = (sectionIds, offset = 100) => {
     };
 
     handleScroll();
-  });
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  return (
-    () => {
-      window.removeEventListener("scroll", handleScroll, { passive: true });
-    },
-    [sectionIds, offset]
-  );
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-  return activSection;
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [sectionIds, offset]);
+
+  return activeSection;
 };
 
 // Smooth Scroll to a function

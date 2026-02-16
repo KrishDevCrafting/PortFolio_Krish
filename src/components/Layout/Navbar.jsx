@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Code, Menu, X } from "lucide-react";
 
 import { NAV_LINKS, PERSONAL_INFO } from "../../utils/Constants";
+import { useScrollSpy, scrollToSection } from "../../hooks/useScrollSpy";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,12 +20,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);  
   }, []);
 
-  const handleNavClick = (sectionId) => {
+  const handleNavClick = (sectionId) => { 
     scrollToSection(sectionId);
     setIsMenuOpen(false);
   };
 
-  return <div>Navbar</div>;
+  return  (
+    <>
+    
+    </>
+  )
 };
 
 export default Navbar;
