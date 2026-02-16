@@ -1,10 +1,8 @@
-import { options } from "prettier-plugin-tailwindcss";
-import React, { useState } from "react";
+import React from "react";
 
-const useScrollrevel = () => {
-  const { threshold = 0.1, rootMargin = "0px" } = options;
-
-  const [isVisible, setVisible] = useState(false);
+const useScrollrevel = (option = {}) => {
+  const { threshold = 0.1, rootMargin = "0px" } = option;
+  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -13,12 +11,16 @@ const useScrollrevel = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
+          setIsVisible(true);
           observer.unobserve(element);
         }
       },
-      { threshold, rootMargin },
+      {
+        threshold,
+        rootMargin,
+      },
     );
+
     observer.observe(element);
   });
 
@@ -28,10 +30,8 @@ const useScrollrevel = () => {
         observer.unobserve(element);
       }
     },
-    [threshold, rootMargin]
+    [threshold, rootMargin ]
   );
-
   return { ref, isVisible };
 };
-
 export default useScrollrevel;
