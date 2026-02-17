@@ -82,6 +82,16 @@ const Navbar = () => {
                 Hire Me
               </button>
             </div>
+
+              {/* {Mobile Navigation} */}
+              <button
+              onClick={()=>setIsMenuOpen(!isMenuOpen)}
+              className=""
+              aria-label="menu"
+              aria-expanded={isMenuOpen}
+              >
+
+              </button>
           </div>
         </div>
       </nav>
