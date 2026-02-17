@@ -35,12 +35,52 @@ const Navbar = () => {
           transform: "translate3d(0, 0, 0)",
         }}
       >
-        <div className="container mx-auto">
-          <div className="">
+        <div className="max-w-[1320px] mx-auto px-5">
+          <div className="flex justify-between items-center">
             {/* {logo} */}
 
             <div className="flex" item-center gap-4>
               <Code className="w-6 h-6 text-primary" />
+              <button
+                onClick={() =>
+                  window.scrollTo({
+                    top: 0,
+                    behaior: "smooth",
+                  })
+                }
+                className="text-2xl font-bold bg-linear-to-r from-primary via-primary/50 to-primary/30 bg-clip-text text-transparent hover:opacity-80 transition-opacity "
+                aria-label="home"
+              >
+                {PERSONAL_INFO.name.split(" ")[0]}
+              </button>
+            </div>
+            {/* {Desktop Navigation} */}
+            <nav className="hidden md:flex items-center gap-7">
+              {NAV_LINKS.map((link) => (
+                <button
+                  key={link.id}
+                  className={`text-base font-medium transition-all duration-300 ${
+                    activeSection === link.id
+                      ? "text-white"
+                      : "text-white/70 hover:text-white"
+                  }`}
+                  onClick={() => handleNavClick(link.id)}
+                >
+                  {link.name}
+                </button>
+              ))}
+            </nav>
+            {/* CTA Button */}
+
+            <div className="hidden md:flex item-center gap-2">
+              <button
+                onClick={() => handleNavClick("contact")}
+                className="
+              px-7 py-3.5 bg-white text-[#212121] font-medium text-base rounded-[17px] border border-white/90 transition-all duration-300
+              "
+              >
+                Hire Me
+              </button>
             </div>
           </div>
         </div>
