@@ -72,7 +72,7 @@ const Navbar = () => {
             </nav>
             {/* CTA Button */}
 
-            <div className="hidden md:flex item-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
               <button
                 onClick={() => handleNavClick("contact")}
                 className="
@@ -83,15 +83,58 @@ const Navbar = () => {
               </button>
             </div>
 
-              {/* {Mobile Navigation} */}
-              <button
-              onClick={()=>setIsMenuOpen(!isMenuOpen)}
-              className=""
+            {/* {Mobile Navigation} */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-all duration-300"
               aria-label="menu"
               aria-expanded={isMenuOpen}
-              >
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
+          {/* {Mobile Menu} */}
 
+          <div
+            className={`md:hidden transition-all duration-300 overflow-hidden mt-4 ${isMenuOpen ? `max-h-[400px] opacity-100` : `max-h-0 opacity-0`}`}
+          >
+            <div
+              className="bg-black/95 backdrop-blur-lg
+            border border-white/10
+            rounded-lg
+            px-5
+            py-6
+            space-y-3
+            
+            "
+            >
+              {NAV_LINKS.map((link) => (
+                <button
+                  key={link.id}
+                  className={`block w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    activeSection === link.id
+                      ? "text-white"
+                      : "text-white/70 hover:text-white"
+                  }`}
+                  onClick={() => handleNavClick(link.id)}
+                >
+                  {link.name}
+                </button>
+              ))}
+
+              <button
+                onClick={() => handleNavClick("contact")}
+                className="
+              w-full px-7 py-3.5 bg-white text-[#212121] font-medium text-base rounded-[17px] border border-white/90 transition-all duration-300 mt-2 
+              "
+              >
+                Hire Me
               </button>
+            </div>
           </div>
         </div>
       </nav>
