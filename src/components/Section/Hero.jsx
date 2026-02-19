@@ -1,5 +1,6 @@
 import React from "react";
 import { Star } from "lucide-react";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiFramer } from "react-icons/si";
 import { PERSONAL_INFO, STATS } from "../../utils/Constants";
 import FadeIn from "../Animations/FadeIn";
 import RadialGradientBackground from "../background/RadialgradientBackground";
@@ -50,7 +51,6 @@ const Hero = () => {
                 </button>
               </FadeIn>
 
-              {/* Tech Stats - grouped on left */}
               <FadeIn delay={400}>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-full">
                   {STATS.map((stat, index) => (
@@ -70,17 +70,52 @@ const Hero = () => {
               </FadeIn>
             </div>
 
-            {/* Right Column - Visual Graphic */}
-            <FadeIn delay={500}>
+            {/* {Right Column-Developer Image} */}
+
+            <FadeIn delay={200}>
+              <div className="">
+                <div className="">
+                  <div className="">
+                    <div className="">
+                      <div className=""></div>
+                    </div>
+
+                    {/* {Image Container} */}
+                    <img
+                      src="/developer=porfolio.png"
+                      alt="Developer at work"
+                      className=""
+                    />
+                  </div>
+                  {/* {Techology Stack} */}
+                  <div className="">
+                    <FadeIn delay={500}>
+                      <div className="">
+                        <div className="">
+                          <div className="">
+                            <SiNextdotjs className="" />
+                          </div>
+                        </div>
+                      </div>
+                    </FadeIn>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* <FadeIn delay={500}>
               <div className="relative flex justify-center lg:justify-end items-center min-h-[400px]">
-                {/* Background Glows */}
+               
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
 
-                {/* Abstract Glass Card */}
+               
                 <div className="relative z-10 w-full max-w-[420px] p-8 rounded-[30px] border border-white/10 bg-white/5 backdrop-blur-xl hover:border-white/20 transition-all duration-500 hover:shadow-2xl group overflow-hidden">
                   <div className="flex items-center gap-4 mb-10">
                     <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center border border-primary/30 group-hover:scale-110 transition-transform duration-500">
-                      <SiReact className="w-6 h-6 text-primary animate-spin-slow" />
+                      <SiReact
+                        className="w-6 h-6 text-primary animate-spin"
+                        style={{ animationDuration: "3s" }}
+                      />
                     </div>
                     <div className="space-y-2">
                       <div className="h-2.5 w-32 bg-white/20 rounded-full" />
@@ -101,7 +136,6 @@ const Hero = () => {
                     </div>
                   </div>
 
-                  {/* Floating Tech Icons */}
                   <div className="absolute -top-6 -right-6 w-16 h-16 rounded-2xl bg-[#0a0a0a] border border-white/10 flex items-center justify-center animate-bounce shadow-2xl">
                     <SiNextdotjs className="w-8 h-8 text-white" />
                   </div>
@@ -110,11 +144,11 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Decorative ping circles */}
+                
                 <div className="absolute -top-4 left-1/4 w-3 h-3 rounded-full bg-primary/50 animate-ping" />
                 <div className="absolute bottom-1/4 -right-4 w-4 h-4 rounded-full bg-white/20" />
               </div>
-            </FadeIn>
+            </FadeIn> */}
           </div>
         </div>
       </section>
