@@ -1,6 +1,12 @@
 import React from "react";
 import { Star } from "lucide-react";
-import { SiReact, SiNextdotjs, SiTailwindcss, SiFramer } from "react-icons/si";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiFramer,
+  SiNodedotjs,
+} from "react-icons/si";
 import { PERSONAL_INFO, STATS } from "../../utils/Constants";
 import FadeIn from "../Animations/FadeIn";
 import RadialGradientBackground from "../background/RadialgradientBackground";
@@ -95,6 +101,13 @@ const Hero = () => {
                           <div className="">
                             <SiNextdotjs className="" />
                           </div>
+                        </div>
+
+                        <div className="">
+                          <SiNextdotjs className="" />
+                        </div>
+                        <div className="">
+                          <SiNodedotjs className="" />
                         </div>
                       </div>
                     </FadeIn>
