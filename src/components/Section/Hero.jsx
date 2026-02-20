@@ -1,5 +1,6 @@
 import React from "react";
 import { Star } from "lucide-react";
+import profile from "../../assets/aushi.jpg";
 import {
   SiReact,
   SiNextdotjs,
@@ -79,19 +80,16 @@ const Hero = () => {
             {/* {Right Column-Developer Image} */}
 
             <FadeIn delay={200}>
-              <div className="">
-                <div className="">
-                  <div className="">
-                    <div className="">
-                      <div className=""></div>
-                    </div>
+              <div className="relative">
+                <div
+                  className="relative overflow-hidden rounded-2xl aspect-4/5 max-w-[500px] ml-auto
+                "
+                >
+                  <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
 
                     {/* {Image Container} */}
-                    <img
-                      src="/developer=porfolio.png"
-                      alt="Developer at work"
-                      className=""
-                    />
+                    <img src={profile} alt="Developer at work" className="" />
                   </div>
                   {/* {Techology Stack} */}
                   <div className="">
