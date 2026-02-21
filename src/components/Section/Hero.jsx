@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "lucide-react";
+import { Star, ChevronDown } from "lucide-react";
 import profile from "../../assets/aushi.jpg";
 import {
   SiReact,
@@ -179,6 +179,15 @@ const Hero = () => {
             </FadeIn> */}
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+
+        <button
+          onClick={() => scrollToSection("about")}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+        >
+          <ChevronDown className="w-8 h-8 text-primary" />
+        </button>
       </section>
     </>
   );
