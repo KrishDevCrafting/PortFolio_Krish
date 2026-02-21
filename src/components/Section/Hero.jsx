@@ -87,9 +87,21 @@ const Hero = () => {
                 >
                   <div className="absolute inset-0 rounded-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-
+                    <div className="absolute  inset-[-2px] bg-linear-to-r from-primary/20 via-primary/10 to-primary animate-spin-slow rounded-2xl"></div>
                     {/* {Image Container} */}
-                    <img src={profile} alt="Developer at work" className="" />
+
+                    <div
+                      className="relative rounded-2xl   
+                    overflow-hidden m-[1px] h-[calc(100%-2px)]"
+                    >
+                      <img
+                        src={profile}
+                        alt="Developer at work"
+                        className="
+                        w-full h-full object-cover
+                    "
+                      />
+                    </div>
                   </div>
                   {/* {Techology Stack} */}
                   <div className="">
