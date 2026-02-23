@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const Fadein = ({ children, delay = 0, duration = 500, threshold = 0.1 }) => {
+const FadeIn = ({ children, delay = 0, duration = 500, threshold = 0.1 }) => {
   const [isVisible, setVisible] = useState(false);
   const elementRef = useRef(null);
 
@@ -25,7 +25,7 @@ const Fadein = ({ children, delay = 0, duration = 500, threshold = 0.1 }) => {
         observer.unobserve(elementRef.current);
       }
     };
-  }, [threshold, isVisible]);
+  }, [threshold]);
 
   return (
     <div
@@ -42,4 +42,4 @@ const Fadein = ({ children, delay = 0, duration = 500, threshold = 0.1 }) => {
   );
 };
 
-export default Fadein;
+export default FadeIn;

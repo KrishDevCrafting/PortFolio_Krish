@@ -107,7 +107,7 @@ const Hero = () => {
                   {/* {Techology Stack} */}
                   <div className="absolute bottom-6 left-6 z-20">
                     <FadeIn delay={500}>
-                      <div className="flex items-center gap-4 bg-black/40 backdrop-blur-sm border-white/10 rounded-full px-6 py-3">
+                      <div className="flex items-center gap-4 bg-black/40 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
                         <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-all duration-300">
                           <SiNextdotjs className="w-full h-full text-primary" />
                         </div>
