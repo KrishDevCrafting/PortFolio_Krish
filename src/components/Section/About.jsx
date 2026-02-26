@@ -31,20 +31,21 @@ const About = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20">
           {/* Left Column - Content */}
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-12">
             {/* Badge */}
-            <FadeIn delay={60}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/10 border border-primary/20 rounded-full w-fit">
-                <Code className="w-4 h-4 text-primary" />
-                <span className="text-xs md:text-sm text-white/80 tracking-[1.2px]">
-                  Full Stack Developer
-                </span>
-                <Sparkles className="w-4 h-4 text-primary" />
-              </div>
-            </FadeIn>
-
+            <div className="flex flex-col gap-8">
+              <FadeIn delay={60}>
+                <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/10 border border-primary/20 rounded-full w-fit">
+                  <Code className="w-4 h-4 text-primary" />
+                  <span className="text-xs md:text-sm text-white/80 tracking-[1.2px]">
+                    Full Stack Developer
+                  </span>
+                  <Sparkles className="w-4 h-4 text-primary" />
+                </div>
+              </FadeIn>
+            </div>
             {/* Heading */}
             <FadeIn delay={100}>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">

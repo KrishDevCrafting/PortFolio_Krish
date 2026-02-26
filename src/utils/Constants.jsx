@@ -1,12 +1,12 @@
 import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
-
+import Resume from "../assets/Resume.pdf?url";
 export const PERSONAL_INFO = {
   name: "Krish",
   title: "Software Engineer",
   email: "krish@example.com",
   location: "India",
   tagline: "Creating seamless user experience with innovative solutions.",
-  resume: "/resume.pdf",
+  resume: Resume,
   bio: [
     "Hii I'm a full stack developer with the hand of Experience in both frontend UI and Backend APIs and also have a good knowledge of the latest trends in the field of software development.",
   ],
