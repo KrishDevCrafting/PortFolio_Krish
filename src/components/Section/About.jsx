@@ -1,5 +1,5 @@
 import React from "react";
-import { Code, Sparkles } from "lucide-react";
+import { Download, Code, Sparkles } from "lucide-react";
 import {
   SiReact,
   SiNextdotjs,
@@ -13,7 +13,6 @@ import FadeIn from "../Animations/FadeIn";
 import RadialGradientBackground from "../background/RadialgradientBackground";
 
 const About = () => {
-  // Skills
   const SKILLS = [
     { name: "React.js", icon: SiReact, color: "#61DAFB" },
     { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
@@ -29,40 +28,47 @@ const About = () => {
       className="relative min-h-screen bg-black py-20 overflow-hidden"
     >
       <RadialGradientBackground variant="about" />
+
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="flex flex-col">
+            {/* Badge */}
             <FadeIn delay={60}>
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/10 border border-primary/20 rounded-full w-fit">
                 <Code className="w-4 h-4 text-primary" />
                 <span className="text-xs md:text-sm text-white/80 tracking-[1.2px]">
-                  Full-Stack Developer
+                  Full Stack Developer
                 </span>
                 <Sparkles className="w-4 h-4 text-primary" />
               </div>
             </FadeIn>
 
-            <FadeIn delay={120}>
+            {/* Heading */}
+            <FadeIn delay={100}>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                About <span className="text-primary">Me</span>
+                Crafting Digital{" "}
+                <span className="text-primary">Experiences</span> That Matter
               </h2>
             </FadeIn>
 
-            <FadeIn delay={180}>
-              {PERSONAL_INFO.bio.map((para, i) => (
-                <p
-                  key={i}
-                  className="text-white/70 text-lg leading-relaxed mb-4"
-                >
-                  {para}
-                </p>
-              ))}
+            {/* Bio */}
+            <FadeIn delay={200}>
+              <div>
+                {PERSONAL_INFO.bio.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-white/70 text-lg leading-relaxed mb-4"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </FadeIn>
 
             {/* Stats */}
-            <FadeIn delay={240}>
+            <FadeIn delay={300}>
               <div className="grid grid-cols-3 gap-6 mt-8">
                 {ABOUT_STATS.map((stat, index) => (
                   <div
@@ -78,6 +84,17 @@ const About = () => {
                   </div>
                 ))}
               </div>
+            </FadeIn>
+
+            {/* Download Resume Button */}
+            <FadeIn delay={400}>
+              <button
+                onClick={() => window.open(PERSONAL_INFO.resume, "_blank")}
+                className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-primary/10 border border-primary/30 text-primary rounded-xl hover:bg-primary/20 transition-all duration-300 group w-fit"
+              >
+                <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-300" />
+                Download Resume
+              </button>
             </FadeIn>
           </div>
 
