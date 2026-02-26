@@ -1,4 +1,4 @@
-import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+// import { Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Resume from "../assets/Resume.pdf?url";
 export const PERSONAL_INFO = {
   name: "Krish",
