@@ -7,8 +7,8 @@ const FadeIn = ({ children, delay = 0, duration = 500, threshold = 0.1 }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Trigger animation when element is visible
-        if (entry.isIntersecting && !isVisible) {
+        // Trigger animation when element is visible (only once)
+        if (entry.isIntersecting) {
           setVisible(true);
         }
       },
@@ -17,12 +17,13 @@ const FadeIn = ({ children, delay = 0, duration = 500, threshold = 0.1 }) => {
         rootMargin: "0px 0px -50px 0px",
       },
     );
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const el = elementRef.current;
+    if (el) {
+      observer.observe(el);
     }
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (el) {
+        observer.unobserve(el);
       }
     };
   }, [threshold]);

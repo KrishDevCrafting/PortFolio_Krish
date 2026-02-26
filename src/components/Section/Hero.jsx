@@ -5,7 +5,6 @@ import {
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiFramer,
   SiNodedotjs,
   SiMongodb,
 } from "react-icons/si";
@@ -19,7 +18,6 @@ const Hero = () => {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
         <RadialGradientBackground variant="hero" />
         {/* {Content Container} */}
-
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8 py-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - content */}
