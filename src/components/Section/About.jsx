@@ -1,5 +1,5 @@
 import React from "react";
-import { Download, Code, Sparkles } from "lucide-react";
+import { Download, Code, Code2, Sparkles } from "lucide-react";
 import {
   SiReact,
   SiNextdotjs,
@@ -27,7 +27,7 @@ const About = () => {
       id="about"
       className="relative min-h-screen bg-black py-20 overflow-hidden"
     >
-      <RadialGradientBackground variant="about" />
+      <RadialGradientBackground varient="about" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
         {/* Main Grid */}
@@ -100,7 +100,7 @@ const About = () => {
           </div>
 
           {/* Right Column - Skills */}
-          <FadeIn delay={300}>
+          {/* <FadeIn delay={300}>
             <div className="relative p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
               <h3 className="text-xl font-semibold text-white mb-6">
                 Tech Stack
@@ -123,6 +123,54 @@ const About = () => {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+          </FadeIn> */}
+
+          <FadeIn delay={200}>
+            <div>
+              <div>
+                <div className=""></div>
+                <div className="">
+                  <div className="">
+                    <div className="">
+                      <Code2 className />
+                    </div>
+                    <div className="">
+                      <h3 className="">Expertise</h3>
+                      <p className="">
+                        Specialized in building scalable web applications with
+                        modern technologies and best practices
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="">
+                <div className=""></div>
+                <div className="">
+                  <Sparkles className="" />
+                </div>
+                <h3 className="">Clean Code</h3>
+                <p className="">
+                  Writing maintainable, well-documented, code that scale.
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <div className=""></div>
+              <div className="">
+                <div className="">
+                  <div>
+                    <Download className="" />
+                  </div>
+                  <h3 className="">Performance</h3>
+                  <p className="">
+                    Optimizing application performance and ensuring smooth user
+                    experience
+                  </p>
+                </div>
               </div>
             </div>
           </FadeIn>
