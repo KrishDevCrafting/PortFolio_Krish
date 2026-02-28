@@ -128,17 +128,20 @@ const About = () => {
           </FadeIn> */}
 
           <FadeIn delay={200}>
-            <div>
-              <div>
-                <div className=""></div>
-                <div className="">
-                  <div className="">
-                    <div className="">
-                      <Code2 className />
+            <div className="grid grid-cols-2 gap-4">
+              {/* Expertise - Full Width */}
+              <div className="col-span-2 relative group">
+                <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-primary/10 rounded-xl">
+                      <Code2 className="w-6 h-6 text-primary" />
                     </div>
-                    <div className="">
-                      <h3 className="">Expertise</h3>
-                      <p className="">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">
+                        Expertise
+                      </h3>
+                      <p className="text-sm text-white/70 leading-relaxed">
                         Specialized in building scalable web applications with
                         modern technologies and best practices
                       </p>
@@ -147,29 +150,72 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="">
-                <div className=""></div>
-                <div className="">
-                  <Sparkles className="" />
+              {/* Clean Code - Half Width */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
+                  <div className="flex flex-col gap-3">
+                    <div className="p-3 bg-primary/10 rounded-xl w-fit">
+                      <Sparkles className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold text-white mb-2">
+                        Clean Code
+                      </h3>
+                      <p className="text-sm text-white/70 leading-relaxed">
+                        Writing maintainable, well-documented code that scales.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="">Clean Code</h3>
-                <p className="">
-                  Writing maintainable, well-documented, code that scale.
-                </p>
+              </div>
+
+              {/* Performance - Half Width */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 h-full">
+                  <div className="flex flex-col gap-3">
+                    <div className="p-3 bg-primary/10 rounded-xl w-fit">
+                      <Download className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold text-white mb-2">
+                        Performance
+                      </h3>
+                      <p className="text-sm text-white/70 leading-relaxed">
+                        Optimizing application performance and ensuring smooth
+                        user experience
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="">
-              <div className=""></div>
-              <div className="">
-                <div className="">
-                  <div>
-                    <Download className="" />
-                  </div>
-                  <h3 className="">Performance</h3>
-                  <p className="">
-                    Optimizing application performance and ensuring smooth user
-                    experience
-                  </p>
+
+            {/* Stats Bar */}
+            <div className="grid grid-cols-3 gap-4 mt-4">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center hover:border-primary/30 transition-all duration-300">
+                <div className="text-2xl font-bold text-primary font-mono mb-1">
+                  100%
+                </div>
+                <div className="text-xs text-white/50 uppercase tracking-wider">
+                  Client Satisfaction
+                </div>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center hover:border-primary/30 transition-all duration-300">
+                <div className="text-2xl font-bold text-primary font-mono mb-1">
+                  24/7
+                </div>
+                <div className="text-xs text-white/50 uppercase tracking-wider">
+                  Support Available
+                </div>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center hover:border-primary/30 transition-all duration-300">
+                <div className="text-2xl font-bold text-primary font-mono mb-1">
+                  Fast
+                </div>
+                <div className="text-xs text-white/50 uppercase tracking-wider">
+                  Delivery Time
                 </div>
               </div>
             </div>
