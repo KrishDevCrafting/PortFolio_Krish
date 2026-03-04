@@ -335,7 +335,7 @@ const Projects = () => {
       className="relative min-h-screen bg-black py-24 overflow-hidden"
     >
       <RadialGradientBackground varient="about" />
-
+ 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
         {/* ── Header ── */}
         <FadeIn delay={0}>

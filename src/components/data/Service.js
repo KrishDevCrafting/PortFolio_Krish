@@ -1,4 +1,4 @@
-export const services = [
+export const Services = [
   {
     id: 1,
     icon: "Layout",
