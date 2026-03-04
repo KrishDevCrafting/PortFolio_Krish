@@ -35,36 +35,100 @@ const Services = () => {
         </FadeIn>
 
         {/* ── Services Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {servicesData.map((service, index) => {
-            const Icon = Icons[service.icon] || Icons.Layout;
-            
+        <div
+          className=""
+        >
+          {servicesData.slice(0, 2).map((service, index) => {
+            const IconComponent = Icons[service.icon] || Icons.Code2
             return (
-              <FadeIn key={service.id} delay={index * 100}>
-                <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 rounded-2xl transition-colors duration-300 pointer-events-none" />
-                  
-                  <div className="mb-6 inline-flex p-4 rounded-xl bg-primary/10 text-primary">
-                    <Icon className="w-8 h-8" />
+              <FadeIn key={service.id} delay={index + 100}>
+                <div
+                  className=""
+                >
+                  <div
+                    className=""
+                  >
+                    <div
+                      className=""
+                    >
+                      <IconComponent className="w-12 h-12 text-primary" />
+                    </div>
+
+                    <div className="">
+                      <h3
+                        className=""
+                      >{service.title}</h3>
+                      <p
+                        className=""
+                      >{service.description}</p>
+                    </div>
+
+                    <div className="" />
                   </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-white/60 leading-relaxed flex-grow">
-                    {service.description}
-                  </p>
-                  
-                  {/* Bottom decorative line */}
-                  <div className="w-0 h-1 bg-primary mt-6 rounded-full group-hover:w-12 transition-all duration-500 delay-100" />
+
                 </div>
               </FadeIn>
             );
           })}
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div
+          className=""
+        >{servicesData.slice(2).map((service, index) => {
+          const IconComponent = Icons[service.icon] || Icons.Code2
+          return (
+            <FadeIn key={service.id} delay={300 + index * 100}>
+              <div
+                className=""
+              >
+                <div
+                  className=""
+                >
+                  <div
+                    className=""
+                  >
+                    <IconComponent className="w-12 h-12 text-primary" />
+                  </div>
+
+                  <div className="">
+                    <h3
+                      className=""
+                    >{service.title}</h3>
+                    <p
+                      className=""
+                    >{service.description}</p>
+                  </div>
+
+                  <div className="" />
+                </div>
+
+              </div>
+            </FadeIn>
+          )
+        })}</div>
       </div>
+
+
+
+
+
+
+
+
+
+
     </section>
   );
 };
