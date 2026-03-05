@@ -29,106 +29,79 @@ const Services = () => {
               My <span className="text-primary">Services</span>
             </h2>
             <p className="text-white/50 text-base max-w-xl leading-relaxed">
-              Transforming ideas into digital reality with cutting-edge technologies and best practices.
+              Transforming ideas into digital reality with cutting-edge
+              technologies and best practices.
             </p>
           </div>
         </FadeIn>
 
         {/* ── Services Grid ── */}
-        <div
-          className=""
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           {servicesData.slice(0, 2).map((service, index) => {
-            const IconComponent = Icons[service.icon] || Icons.Code2
+            const IconComponent = Icons[service.icon] || Icons.Code2;
             return (
               <FadeIn key={service.id} delay={index + 100}>
                 <div
-                  className=""
+                  className="group relative bg-white/5 border border-white/10 rounded-3xl 
+                p-8 hover:border-primary/30 transition-all duration-300 h-full min-h-[250px] flex flex-col
+                
+                "
                 >
-                  <div
-                    className=""
-                  >
-                    <div
-                      className=""
-                    >
-                      <IconComponent className="w-12 h-12 text-primary" />
+                  <div className="mb-6">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-8 h-8 text-primary" />
                     </div>
 
-                    <div className="">
-                      <h3
-                        className=""
-                      >{service.title}</h3>
-                      <p
-                        className=""
-                      >{service.description}</p>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/60 leading-relaxed">
+                        {service.description}
+                      </p>
                     </div>
 
-                    <div className="" />
+                    <div className="absolute inset-0 bg-linear-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-primary/5 rounded-3xl transition-all duration-300 pointer-events-none" />
                   </div>
-
                 </div>
               </FadeIn>
             );
           })}
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <div
-          className=""
-        >{servicesData.slice(2).map((service, index) => {
-          const IconComponent = Icons[service.icon] || Icons.Code2
-          return (
-            <FadeIn key={service.id} delay={300 + index * 100}>
-              <div
-                className=""
-              >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {servicesData.slice(2).map((service, index) => {
+            const IconComponent = Icons[service.icon] || Icons.Code2;
+            return (
+              <FadeIn key={service.id} delay={300 + index * 100}>
                 <div
-                  className=""
+                  className="group relative bg-white/5 border border-white/10 rounded-3xl 
+                p-8 hover:border-primary/30 transition-all duration-300 h-full min-h-[250px] flex flex-col
+                
+                "
                 >
-                  <div
-                    className=""
-                  >
-                    <IconComponent className="w-12 h-12 text-primary" />
-                  </div>
+                  <div className="mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-6 h-6 text-primary" />
+                    </div>
 
-                  <div className="">
-                    <h3
-                      className=""
-                    >{service.title}</h3>
-                    <p
-                      className=""
-                    >{service.description}</p>
-                  </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/60 leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
 
-                  <div className="" />
+                    <div className="absolute inset-0 bg-linear-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-primary/5 rounded-3xl transition-all duration-300 pointer-events-none" />
+                  </div>
                 </div>
-
-              </div>
-            </FadeIn>
-          )
-        })}</div>
+              </FadeIn>
+            );
+          })}
+        </div>
       </div>
-
-
-
-
-
-
-
-
-
-
     </section>
   );
 };
