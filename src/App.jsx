@@ -6,6 +6,7 @@ import Skill from "./components/Section/Skill";
 import Projects from "./components/Section/Projects";
 import Services from "./components/Section/Services";
 import Testimonial from "./components/Section/Testimonial";
+import Contact from "./components/Section/Contact";
 const App = () => {
   return (
     <div className="min-h-screen bg-black pb-[100vh]">
@@ -16,7 +17,8 @@ const App = () => {
         <Skill />
         <Projects />
         <Services />
-        <Testimonial/>
+        <Testimonial />
+        <Contact />
       </main>
     </div>
   );
