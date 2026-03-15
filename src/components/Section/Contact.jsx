@@ -153,6 +153,71 @@ const Contact = () => {
                 </form>
               </div>
             </FadeIn>
+
+            {/* ── Right Panel — Contact Info ── */}
+            <FadeIn delay={200}>
+              <div className="flex flex-col gap-6">
+
+                {/* Availability badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full w-fit">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <span className="text-sm text-primary font-medium">Available for new projects</span>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Let's Connect</h3>
+                  <p className="text-white/50 leading-relaxed">
+                    Whether you have a project in mind or just want to say hello —
+                    my inbox is always open!
+                  </p>
+                </div>
+
+                {/* Contact info cards */}
+                <div className="flex flex-col gap-4">
+                  <a
+                    href={`mailto:${PERSONAL_INFO.email}`}
+                    className="group flex items-center gap-4 p-4 bg-white/5 border border-white/10 hover:border-primary/30 rounded-2xl transition-all duration-300"
+                  >
+                    <div className="p-3 bg-primary/10 border border-primary/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                      <Mail className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-white/40 uppercase tracking-wider mb-0.5">Email</p>
+                      <p className="text-white font-medium">{PERSONAL_INFO.email}</p>
+                    </div>
+                  </a>
+
+                  <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl">
+                    <div className="p-3 bg-primary/10 border border-primary/20 rounded-xl">
+                      <MapPin className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-white/40 uppercase tracking-wider mb-0.5">Location</p>
+                      <p className="text-white font-medium">{PERSONAL_INFO.location}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social links */}
+                <div>
+                  <p className="text-xs text-white/40 uppercase tracking-wider mb-3">Find me on</p>
+                  <div className="flex gap-3">
+                    {SOCIAL_LINKS.map(({ key, href, Icon }) => (
+                      <a
+                        key={key}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 bg-white/5 border border-white/10 hover:border-primary/30 hover:bg-primary/10 rounded-xl text-white/50 hover:text-primary transition-all duration-300 hover:scale-110"
+                      >
+                        <Icon className="w-5 h-5" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

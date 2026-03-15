@@ -7,9 +7,10 @@ import Projects from "./components/Section/Projects";
 import Services from "./components/Section/Services";
 import Testimonial from "./components/Section/Testimonial";
 import Contact from "./components/Section/Contact";
+import Footer from "./components/Layout/Footer";
 const App = () => {
   return (
-    <div className="min-h-screen bg-black pb-[100vh]">
+    <div className="min-h-screen bg-black">
       <Navbar />
       <main>
         <Hero />
@@ -20,6 +21,7 @@ const App = () => {
         <Testimonial />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 };
