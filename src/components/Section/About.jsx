@@ -12,7 +12,7 @@ import {
 import { PERSONAL_INFO, ABOUT_STATS } from "../../utils/Constants";
 import { skill } from "../data/Skill";
 import FadeIn from "../Animations/FadeIn";
-import RadialGradientBackground from "../background/RadialgradientBackground";
+
 
 const About = () => {
   const SKILLS = [
@@ -29,7 +29,7 @@ const About = () => {
       id="about"
       className="relative min-h-screen bg-black py-20 overflow-hidden"
     >
-      <RadialGradientBackground varient="about" />
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-primary/25 opacity-40 rounded-full blur-3xl" />

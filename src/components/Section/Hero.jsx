@@ -10,13 +10,13 @@ import {
 } from "react-icons/si";
 import { PERSONAL_INFO, STATS } from "../../utils/Constants";
 import FadeIn from "../Animations/FadeIn";
-import RadialGradientBackground from "../background/RadialgradientBackground";
+
 import { scrollToSection } from "../../hooks/useScrollSpy";
 const Hero = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-        <RadialGradientBackground variant="hero" />
+
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-primary/25 opacity-40 rounded-full blur-3xl" />

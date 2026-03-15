@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { skill } from "../data/Skill";
 import * as Icons from "lucide-react";
 import FadeIn from "../Animations/FadeIn";
-import RadialGradientBackground from "../background/RadialgradientBackground";
+
 import { Code2, Sparkles } from "lucide-react";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -139,7 +139,7 @@ const Skill = () => {
       id="skills"
       className="relative min-h-screen bg-black py-24 overflow-hidden"
     >
-      <RadialGradientBackground varient="about" />
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />
         <div className="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] bg-primary/25 opacity-40 rounded-full blur-3xl" />

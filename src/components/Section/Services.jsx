@@ -2,7 +2,7 @@ import React from "react";
 import { Services as servicesData } from "../data/Service";
 import * as Icons from "lucide-react";
 import FadeIn from "../Animations/FadeIn";
-import RadialGradientBackground from "../background/RadialgradientBackground";
+
 import { Sparkles, Layers } from "lucide-react";
 
 const Services = () => {
@@ -11,7 +11,7 @@ const Services = () => {
       id="services"
       className="relative min-h-screen bg-black py-24 overflow-hidden"
     >
-      <RadialGradientBackground varient="about" />
+
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-primary/25 opacity-40 rounded-full blur-3xl" />
