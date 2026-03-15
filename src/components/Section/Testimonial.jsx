@@ -32,7 +32,7 @@ const Testimonial = () => {
   return (
     <section
       id="testimonial"
-      className="relative min-h-screen bg-black py-24 overflow-hidden"
+      className="relative min-h-screen bg-black py-24 overflow-hidden scroll-mt-24"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />

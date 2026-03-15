@@ -27,7 +27,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen bg-black py-20 overflow-hidden"
+      className="relative min-h-screen bg-black py-20 overflow-hidden scroll-mt-24"
     >
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

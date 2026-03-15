@@ -62,7 +62,7 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="relative py-20 bg-black overflow-hidden">
+      <section id="contact" className="relative py-20 bg-black overflow-hidden scroll-mt-24">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 opacity-30 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 opacity-30 rounded-full blur-3xl" />

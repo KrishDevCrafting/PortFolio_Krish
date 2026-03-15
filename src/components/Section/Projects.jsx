@@ -332,7 +332,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative min-h-screen bg-black py-24 overflow-hidden"
+      className="relative min-h-screen bg-black py-24 overflow-hidden scroll-mt-24"
     >
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
