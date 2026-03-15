@@ -12,6 +12,10 @@ const Services = () => {
       className="relative min-h-screen bg-black py-24 overflow-hidden"
     >
       <RadialGradientBackground varient="about" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-primary/15 opacity-25 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-primary/10 opacity-20 rounded-full blur-3xl" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
         {/* ── Header ── */}
