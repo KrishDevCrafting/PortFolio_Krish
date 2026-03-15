@@ -23,6 +23,9 @@ const Footer = () => {
     <footer className="relative bg-black border-t border-white/8 overflow-hidden">
       {/* top glow line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      {/* background orbs */}
+      <div className="absolute top-0 left-1/4 w-80 h-80 bg-primary/10 opacity-30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/10 opacity-20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">

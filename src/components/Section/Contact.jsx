@@ -156,7 +156,10 @@ const Contact = () => {
 
             {/* ── Right Panel — Contact Info ── */}
             <FadeIn delay={200}>
-              <div className="flex flex-col gap-6">
+              <div className="relative flex flex-col gap-6 bg-white/5 border border-white/10 rounded-2xl p-8 overflow-hidden">
+                {/* Background orbs */}
+                <div className="absolute top-0 right-0 w-48 h-48 bg-primary/20 opacity-30 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary/15 opacity-20 rounded-full blur-3xl pointer-events-none" />
 
                 {/* Availability badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full w-fit">
