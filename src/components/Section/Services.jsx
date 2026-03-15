@@ -13,8 +13,8 @@ const Services = () => {
     >
       <RadialGradientBackground varient="about" />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-primary/15 opacity-25 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-primary/10 opacity-20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-primary/25 opacity-40 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
