@@ -12,7 +12,7 @@ import {
 import FadeIn from "../Animations/FadeIn";
 
 const PERSONAL_INFO = {
-  email: "krishdevcraft@gmail.com",
+  email: "krishgeek777@gmail.com",
   location: "India",
 };
 
