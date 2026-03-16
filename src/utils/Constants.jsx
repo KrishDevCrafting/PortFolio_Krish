@@ -3,7 +3,7 @@ import Resume from "../assets/Resume.pdf?url";
 export const PERSONAL_INFO = {
   name: "Krish",
   title: "Software Engineer",
-  email: "krish@example.com",
+  email: "krishgeek777@gmail.com",
   location: "India",
   tagline: "Creating seamless user experience with innovative solutions.",
   resume: Resume,
@@ -12,9 +12,9 @@ export const PERSONAL_INFO = {
   ],
 };
 export const SOCIAL_LINKS = {
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  twitter: "https://twitter.com",
+  github: "https://github.com/KrishDevCrafting",
+  linkedin: "https://www.linkedin.com/in/krish-singh-7939b1294/",
+  twitter: "https://x.com/KrishUchiha007",
   instagram: "https://instagram.com",
   facebook: "https://facebook.com",
 };

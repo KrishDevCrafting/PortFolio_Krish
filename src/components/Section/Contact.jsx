@@ -20,10 +20,10 @@ const SOCIAL_LINKS = [
   { key: "github", href: "https://github.com/KrishDevCrafting", Icon: Github },
   {
     key: "linkedin",
-    href: "https://linkedin.com/in/krishdevcraft",
+    href: "https://www.linkedin.com/in/krish-singh-7939b1294/",
     Icon: Linkedin,
   },
-  { key: "twitter", href: "https://twitter.com/krishdevcraft", Icon: Twitter },
+  { key: "twitter", href: "https://x.com/KrishUchiha007", Icon: Twitter },
 ];
 
 const Contact = () => {
