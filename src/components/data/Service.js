@@ -1,14 +1,14 @@
 export const Services = [
   {
     id: 1,
-    icon: "Layout",
+    icon: "AppWindow",
     title: "Frontend Development",
     description:
       "Creating responsive and user-friendly interfaces using React.js and Next.js.",
   },
   {
     id: 2,
-    icon: "Layout",
+    icon: "Database",
     title: "Backend Development",
     description:
       "Creating responsive and user-friendly interfaces using React.js and Next.js.",
