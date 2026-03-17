@@ -1,5 +1,5 @@
 import React from "react";
-import { Star, ChevronDown } from "lucide-react";
+import { Star, ChevronDown, ArrowRight } from "lucide-react";
 import profile from "../../assets/aushi.jpg";
 import {
   SiReact,
@@ -27,8 +27,8 @@ const Hero = () => {
             {/* Left Column - content */}
             <div className="flex flex-col">
               <FadeIn delay={0}>
-                <div className="inline-flex items-center gap-2.5 px-[18px] py-[11px] mb-8 bg-linear-to-r from-primary/10 via-primary/15 to-primary/20 border border-primary/20 rounded-full w-fit">
-                  <Star className="w-4 h-4 text-white fill-white" />
+                <div className="inline-flex items-center gap-2.5 px-[18px] py-[11px] mb-8 bg-linear-to-r from-primary/10 via-primary/15 to-primary/20 border border-primary/20 rounded-full w-fit hover:border-primary/40 transition-colors duration-300 cursor-default">
+                  <Star className="w-4 h-4 text-white fill-white animate-pulse" />
                   <span className="text-xs md:text-sm tracking-[1.2px]">
                     {PERSONAL_INFO.title} | Based in {PERSONAL_INFO.location}
                   </span>
@@ -55,8 +55,9 @@ const Hero = () => {
                   className="inline-flex items-center gap-0 mb-12 group w-fit"
                   onClick={() => scrollToSection("contact")}
                 >
-                  <div className="relative z-10 bg-white text-[#212121] rounded-[17px] px-[26px] py-[13px] text-base font-medium border border-white hover:bg-transparent hover:text-white transition-all duration-300">
+                  <div className="relative z-10 bg-white text-[#212121] rounded-[17px] px-[26px] py-[13px] text-base font-medium border border-white hover:bg-transparent hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
                     Get in Touch
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </button>
               </FadeIn>
