@@ -87,7 +87,7 @@ const SkillCard = ({ s, index }) => {
             <Icon className="w-5 h-5 text-primary" />
           </div>
           <span
-            className={`text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full truncate ${style.badge}`}
+            className={`text-[10px] sm:text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full truncate ${style.badge}`}
           >
             {s.level}
           </span>
