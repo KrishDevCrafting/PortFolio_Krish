@@ -16,7 +16,6 @@ const Hero = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-primary/25 opacity-40 rounded-full blur-3xl" />
@@ -85,17 +84,13 @@ const Hero = () => {
 
             <FadeIn delay={200}>
               <div className="relative">
-                <div
-                  className="relative overflow-hidden rounded-2xl aspect-square md:aspect-4/5 w-full max-w-[350px] md:max-w-[500px] mx-auto lg:ml-auto"
-                >
+                <div className="relative overflow-hidden rounded-2xl aspect-square md:aspect-4/5 w-full max-w-[350px] md:max-w-[500px] mx-auto lg:ml-auto">
                   <div className="absolute inset-0 rounded-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
                     <div className="absolute  inset-[-2px] bg-linear-to-r from-primary/20 via-primary/10 to-primary animate-spin-slow rounded-2xl"></div>
                     {/* {Image Container} */}
 
-                    <div
-                      className="relative rounded-2xl overflow-hidden m-[1px] h-[calc(100%-2px)] group-hover:brightness-110 transition-all duration-300"
-                    >
+                    <div className="relative rounded-2xl overflow-hidden m-[1px] h-[calc(100%-2px)] group-hover:brightness-110 transition-all duration-300">
                       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80 z-20 pointer-events-none" />
                       <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-20 pointer-events-none" />
                       <img
