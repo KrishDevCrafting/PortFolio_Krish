@@ -1,6 +1,6 @@
 import React from "react";
 import { Star, ChevronDown, ArrowRight } from "lucide-react";
-import profile from "../../assets/aushi.jpg";
+import profile from "../../assets/krish-profile.jpg";
 import {
   SiReact,
   SiNextdotjs,
@@ -95,15 +95,14 @@ const Hero = () => {
                     {/* {Image Container} */}
 
                     <div
-                      className="relative rounded-2xl   
-                    overflow-hidden m-[1px] h-[calc(100%-2px)]"
+                      className="relative rounded-2xl overflow-hidden m-[1px] h-[calc(100%-2px)] group-hover:brightness-110 transition-all duration-300"
                     >
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80 z-20 pointer-events-none" />
+                      <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-20 pointer-events-none" />
                       <img
                         src={profile}
                         alt="Developer at work"
-                        className="
-                        w-full h-full object-cover
-                    "
+                        className="w-full h-full object-cover filter contrast-[1.1] brightness-90 saturate-[0.85]"
                       />
                     </div>
                   </div>
