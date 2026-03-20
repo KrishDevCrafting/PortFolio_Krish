@@ -87,7 +87,7 @@ const SkillCard = ({ s, index }) => {
             <Icon className="w-5 h-5 text-primary" />
           </div>
           <span
-            className={`text-[10px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full ${style.badge}`}
+            className={`text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full truncate ${style.badge}`}
           >
             {s.level}
           </span>
@@ -139,7 +139,6 @@ const Skill = () => {
       id="skills"
       className="relative min-h-screen bg-black py-24 overflow-hidden scroll-mt-24"
     >
-
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-primary/30 opacity-50 rounded-full blur-3xl" />
         <div className="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] bg-primary/25 opacity-40 rounded-full blur-3xl" />
@@ -197,10 +196,11 @@ const Skill = () => {
               <button
                 key={cat}
                 onClick={() => setActiveTab(cat)}
-                className={`px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${activeTab === cat
+                className={`px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
+                  activeTab === cat
                     ? "bg-primary text-black border-primary shadow-[0_0_16px_#8DFF6955]"
                     : "bg-white/5 text-white/60 border-white/10 hover:border-primary/30 hover:text-white hover:bg-white/10"
-                  }`}
+                }`}
               >
                 {cat}
               </button>
