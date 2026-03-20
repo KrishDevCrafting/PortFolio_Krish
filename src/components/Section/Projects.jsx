@@ -96,7 +96,9 @@ const TechPill = ({ name, accent }) => (
 );
 
 // ─── Project Card ─────────────────────────────────────────────────────────────
-const ProjectCard = ({ p, index }) => {
+const ProjectCard = React.memo(({ p, index }) => {
+  // Console log to see the memoization magic!
+  console.log(`[React.memo checking...] Rendered: ${p.title} 🚀`);
   const theme = BANNER_THEMES[index % BANNER_THEMES.length];
   const { Icon1, Icon2, Icon3 } = theme;
 
@@ -316,7 +318,7 @@ const ProjectCard = ({ p, index }) => {
       </div>
     </FadeIn>
   );
-};
+});
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 const Projects = () => {
