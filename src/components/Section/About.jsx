@@ -37,7 +37,7 @@ const About = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 lg:px-8">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
           <div className="flex flex-col gap-12">
             {/* Badge */}
