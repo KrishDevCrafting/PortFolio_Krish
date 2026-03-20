@@ -86,8 +86,7 @@ const Hero = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <div
-                  className="relative overflow-hidden rounded-2xl aspect-4/5 max-w-[500px] ml-auto
-                "
+                  className="relative overflow-hidden rounded-2xl aspect-square md:aspect-4/5 w-full max-w-[350px] md:max-w-[500px] mx-auto lg:ml-auto"
                 >
                   <div className="absolute inset-0 rounded-2xl overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
